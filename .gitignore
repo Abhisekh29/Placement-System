@@ -1,0 +1,10 @@
+# --- Images (root-level folder) ---
+images/
+
+
+# --- Dependencies ---
+node_modules/
+backend/node_modules/
+backend/.env
+frontend/node_modules/
+backend/uploads/

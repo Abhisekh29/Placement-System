@@ -1,0 +1,170 @@
+@import "tailwindcss";
+
+/* =========================================
+   🖱️ SCROLLBAR STYLES
+   ========================================= */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none; /* IE/Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hover::-webkit-scrollbar {
+  width: 4px;
+}
+
+.scrollbar-hover::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scrollbar-hover::-webkit-scrollbar-thumb {
+  background-color: transparent;
+  border-radius: 9999px;
+}
+
+/* Show scrollbar on hover */
+.scrollbar-hover:hover::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.scrollbar-hover {
+  scrollbar-width: thin; /* For Firefox */
+  scrollbar-color: transparent transparent;
+}
+
+.scrollbar-hover:hover {
+  scrollbar-color: rgba(0, 0, 0, 0.3) transparent;
+}
+
+/* =========================================
+   🔄 GLOBAL ANIMATIONS
+   ========================================= */
+@keyframes slowspin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-slowspin {
+  animation: slowspin 2s linear infinite;
+}
+
+/* =========================================
+   🔔 NOTIFICATION ANIMATIONS
+   ========================================= */
+
+/* Gentle Float */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+.animate-float {
+  animation: float 2.5s ease-in-out infinite;
+  display: inline-block;
+}
+
+/* Soft Bounce */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+.animate-bounce-soft {
+  animation: bounce 1.8s ease-in-out infinite;
+}
+
+/* Pulse Glow */
+@keyframes pulseGlow {
+  0%, 100% { text-shadow: 0 0 0px #3b82f6; }
+  50% { text-shadow: 0 0 8px #3b82f6; }
+}
+.animate-pulse-glow {
+  animation: pulseGlow 2s ease-in-out infinite;
+}
+
+/* Slide Flicker */
+@keyframes slideFlicker {
+  0% { transform: translateY(0); opacity: 1; }
+  45% { transform: translateY(-3px); opacity: 0.8; }
+  50% { transform: translateY(-3px); opacity: 0.9; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+.animate-slide-flicker {
+  animation: slideFlicker 3s ease-in-out infinite;
+}
+
+/* Gentle Wave */
+@keyframes wave {
+  0%, 100% { transform: rotate(0deg) translateY(0); }
+  25% { transform: rotate(-2deg) translateY(-2px); }
+  75% { transform: rotate(2deg) translateY(2px); }
+}
+.animate-wave {
+  animation: wave 3s ease-in-out infinite;
+  transform-origin: center;
+}
+
+/* Alternating Tilt (Opposite Directions) */
+@keyframes tilt {
+  0%, 100% { transform: rotateY(0deg); }
+  25% { transform: rotateY(10deg); }
+  75% { transform: rotateY(-10deg); }
+}
+@keyframes tiltReverse {
+  0%, 100% { transform: rotateY(0deg); }
+  25% { transform: rotateY(-10deg); }
+  75% { transform: rotateY(10deg); }
+}
+.animate-tilt {
+  animation: tilt 3s ease-in-out infinite;
+  display: inline-block;
+  transform-origin: center;
+}
+.animate-tilt-reverse {
+  animation: tiltReverse 3s ease-in-out infinite;
+  display: inline-block;
+  transform-origin: center;
+}
+.animate-tilt:hover,
+.animate-tilt-reverse:hover {
+  animation-play-state: paused;
+}
+
+/* Glow Pulse */
+@keyframes glow {
+  0%, 100% { opacity: 1; text-shadow: 0 0 0px transparent; }
+  50% { opacity: 0.8; text-shadow: 0 0 6px rgba(59,130,246,0.7); }
+}
+.animate-glow {
+  animation: glow 2s ease-in-out infinite;
+  display: inline-block;
+}
+
+/* Gentle Sway */
+@keyframes sway {
+  0%, 100% { transform: rotateZ(0deg); }
+  25% { transform: rotateZ(5deg); }
+  75% { transform: rotateZ(-5deg); }
+}
+.animate-sway {
+  animation: sway 2s ease-in-out infinite;
+  display: inline-block;
+  transform-origin: center bottom;
+}
+
+/* Pause all tilt animations when hovering over a notification item */
+.notification-item:hover * {
+  animation-play-state: paused;
+}
+
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+.group:hover .text-4xl {
+  animation: float 1s ease-in-out infinite;
+}
