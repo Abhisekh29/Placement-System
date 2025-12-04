@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -6,51 +5,51 @@ const AdminCard = () => {
   const cardItems = [
     {
       name: "Academic Year",
-      path: "/admin/academic-year",
+      path: "/admin/8th-sem",
     },
     {
       name: "Academic Session",
-      path: "/admin/academic-session",
+      path: "/admin/8th-sem",
     },
     {
       name: "Department",
-      path: "/admin/department",
+      path: "/admin/8th-sem",
     },
     {
       name: "Program",
-      path: "/admin/program",
+      path: "/admin/8th-sem",
     },
     {
       name: "Company Type",
-      path: "/admin/company-type",
+      path: "/admin/8th-sem",
     },
     {
       name: "Company",
-      path: "/admin/company",
+      path: "/admin/8th-sem",
     },
     {
       name: "Placement Drive",
-      path: "/admin/placement-drive",
+      path: "/admin/8th-sem",
     },
     {
       name: "Notifications",
-      path: "/admin/notifications",
+      path: "/admin/8th-sem",
     },
     {
       name: "Internship",
-      path: "/admin/internship",
+      path: "/admin/8th-sem",
     },
     {
       name: "Expenditure",
-      path: "/admin/expenditure",
+      path: "/admin/8th-sem",
     },
     {
       name: "Students",
-      path: "/admin/students",
+      path: "/admin/8th-sem",
     },
     {
       name: "Reports",
-      path: "/admin/reports",
+      path: "/admin/8th-sem",
     },
   ];
 

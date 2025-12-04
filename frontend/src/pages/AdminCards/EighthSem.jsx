@@ -1,4 +1,4 @@
-const AcademicYear = () => {
+const EighthSem = () => {
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <div className="grow flex flex-col items-center justify-center text-center">
@@ -10,4 +10,4 @@ const AcademicYear = () => {
   );
 };
 
-export default AcademicYear;
+export default EighthSem;

@@ -10,24 +10,12 @@ import AdminDashboard from "./pages/AdminDashboard";
 
 import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
 
-import AcademicYear from "./pages/AdminCards/AcademicYear";
-import Department from "./pages/AdminCards/Department";
-import CompanyType from "./pages/AdminCards/CompanyType";
-import AcademicSession from "./pages/AdminCards/AcademicSession";
-import Program from "./pages/AdminCards/Program";
-import Student from "./pages/AdminCards/Students";
-import Company from "./pages/AdminCards/Company";
-import Expenditure from "./pages/AdminCards/Expenditure";
-import Notification from "./pages/AdminCards/Notification";
-import Internship from "./pages/AdminCards/Internship";
-import RejectedStudent from "./pages/AdminCards/RejectedStudent"; 
-import PlacementDrive from "./pages/AdminCards/PlacementDrive";
 import ManageInternships from "./pages/Student/ManageInternships";
 import StudentDriveDetail from "./pages/Student/StudentDriveDetails";
 import StudentMyPlacement from "./pages/Student/StudentMyPlacement";
 import IncompleteRegistrations from "./pages/AdminCards/IncompleteRegistrations";
-import InternshipRequirement from "./pages/AdminCards/InternshipRequirement";
-import Reports from "./pages/AdminCards/Reports";
+
+import EighthSem from "./pages/AdminCards/EighthSem";
 
 // Role-based wrappers
 const AdminRoute = ({ children }) => {
@@ -113,123 +101,19 @@ const App = () => {
       ),
     },
     {
-      path: "/admin/academic-year",
+      path: "/admin/8th-sem",
       element: (
         <AdminRoute>
-          <AcademicYear />
-        </AdminRoute>
-      ),
-    },
-    {
-      path: "/admin/academic-session",
-      element: (
-        <AdminRoute>
-          <AcademicSession />
-        </AdminRoute>
-      ),
-    },
-    {
-      path: "/admin/department",
-      element: (
-        <AdminRoute>
-          <Department />
-        </AdminRoute>
-      ),
-    },
-    {
-      path: "/admin/program",
-      element: (
-        <AdminRoute>
-          <Program />
-        </AdminRoute>
-      ),
-    },
-    {
-      path: "/admin/company-type",
-      element: (
-        <AdminRoute>
-          <CompanyType />
-        </AdminRoute>
-      ),
-    },
-    {
-      path: "/admin/company",
-      element: (
-        <AdminRoute>
-          <Company />
-        </AdminRoute>
-      ),
-    },
-    {
-      path: "/admin/placement-drive",
-      element: (
-        <AdminRoute>
-          <PlacementDrive />
-        </AdminRoute>
-      ),
-    },
-    {
-      path: "/admin/notifications",
-      element: (
-        <AdminRoute>
-          <Notification />
-        </AdminRoute>
-      ),
-    },
-    {
-      path: "/admin/internship",
-      element: (
-        <AdminRoute>
-          <Internship />
-        </AdminRoute>
-      ),
-    },
-    {
-      path: "/admin/internship-requirements",
-      element: (
-        <AdminRoute>
-          <InternshipRequirement />
-        </AdminRoute>
-      ),
-    },
-    {
-      path: "/admin/expenditure",
-      element: (
-        <AdminRoute>
-          <Expenditure />
+          <EighthSem />
         </AdminRoute>
       ),
     },
     
     {
-      path: "/admin/students",
-      element: (
-        <AdminRoute>
-          <Student />
-        </AdminRoute>
-      ),
-    },
-    {
-      path: "/admin/rejected-students",
-      element: (
-        <AdminRoute>
-          <RejectedStudent/>
-        </AdminRoute>
-      ),
-    },
-    {
       path: "/admin/incomplete-registrations",
       element: (
         <AdminRoute>
           <IncompleteRegistrations />
-        </AdminRoute>
-      ),
-    },
-    {
-      path: "/admin/reports",
-      element: (
-        <AdminRoute>
-          <Reports />
         </AdminRoute>
       ),
     },
