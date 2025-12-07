@@ -35,7 +35,7 @@ const fileFilter = (req, file, cb) => {
 export const uploadOfferLetter = multer({ storage, fileFilter });
 
 
-// --- 2. getMyPlacements (FIXED) ---
+// --- 2. getMyPlacements ---
 // Now selects all the columns from your database
 export const getMyPlacements = (req, res) => {
   const user_id = req.user.userid; 
@@ -72,7 +72,7 @@ export const getMyPlacements = (req, res) => {
   });
 };
 
-// --- 3. updateMyPlacement (FIXED) ---
+// --- 3. updateMyPlacement ---
 // Matches schema: 'is_selected', 'role', 'place', 'offerletter_file_name'
 export const updateMyPlacement = (req, res) => {
   const user_id = req.user.userid;
@@ -170,7 +170,7 @@ export const updateMyPlacement = (req, res) => {
 };
 
 
-// --- 4. applyForDrive (CRITICAL ) ---
+// --- 4. applyForDrive---
 // This now finds the CTC and saves it to your 'student_placement' table
 export const applyForDrive = (req, res) => {
   const user_id = req.user.userid; 

@@ -205,7 +205,6 @@ export const deleteStudentInternship = (req, res) => {
       if (deleteErr)
         return res.status(500).json({ message: "Failed to delete internship.", error: deleteErr });
       
-      // FIX: Only delete the file AFTER the DB record is successfully deleted
       if (oldFileName) {
         const filePath = path.resolve("uploads/certificates", oldFileName);
         if (fs.existsSync(filePath)) {

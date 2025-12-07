@@ -76,11 +76,3 @@ export const updateStudent = (req, res) => {
     });
   });
 };
-
-export const getStudentsList = (req, res) => {
-  const q = "SELECT userid, name, rollno FROM student_master ORDER BY rollno";
-  db.query(q, (err, data) => {
-    if (err) return res.status(500).json(err);
-    return res.status(200).json(data);
-  });
-};
