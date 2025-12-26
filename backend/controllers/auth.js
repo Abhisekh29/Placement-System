@@ -58,7 +58,7 @@ export const login = (req, res) => {
         user_type: data[0].user_type, // optional, useful for role-based access
       },
       "jwtkey",
-       // { expiresIn: "10s" }
+       { expiresIn: "15m" }
     );
     const { password, ...other } = data[0];
 

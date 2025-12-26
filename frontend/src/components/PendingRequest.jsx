@@ -3,7 +3,7 @@ import React from "react";
 const PendingRequest = () => {
 
   return (
-    <div className="bg-blue-200 py-4 px-6 rounded-xl shadow-md h-full min-h-[100px] flex flex-col">
+    <div className="bg-blue-200 py-4 px-6 rounded-xl shadow-md h-full min-h-[130px] flex flex-col">
       {/* Header */}
       <div className="mb-4">
         <h2 className="text-2xl font-bold text-gray-800">Pending Requests</h2>
